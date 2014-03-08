@@ -1,0 +1,17 @@
+libuuid:100000:10000
+syslog:110000:10000
+messagebus:120000:10000
+usbmux:130000:10000
+dnsmasq:140000:10000
+avahi-autoipd:150000:10000
+kernoops:160000:10000
+rtkit:170000:10000
+speech-dispatcher:180000:10000
+avahi:190000:10000
+pulse:200000:10000
+hplip:210000:10000
+colord:220000:10000
+saned:230000:10000
+mdm:240000:10000
+# empty default subuid/subgid file
+kolan:250000:10000

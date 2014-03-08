@@ -1,0 +1,41 @@
+#!/bin/sh
+# Stolen from the debian kdm setup, aren't I sneaky
+# Plus a lot of fun stuff added
+#  -George
+
+PATH=/usr/bin:$PATH
+OLD_IFS=$IFS
+
+mdmwhich () {
+  COMMAND="$1"
+  OUTPUT=
+  IFS=:
+  for dir in $PATH
+  do
+    if test -x "$dir/$COMMAND" ; then
+      if test "x$OUTPUT" = "x" ; then
+        OUTPUT="$dir/$COMMAND"
+      fi
+    fi
+  done
+  IFS=$OLD_IFS 
+  echo "$OUTPUT"
+}
+
+sysresources=/etc/X11/Xresources
+
+# merge in defaults
+if [ -f "$sysresources" ]; then
+    xrdb -merge "$sysresources"
+fi
+
+sysmodmap=/etc/X11/Xmodmap
+
+XMODMAP=`mdmwhich xmodmap`
+if [ "x$XMODMAP" != "x" ] ; then
+  if [ -f $sysmodmap ]; then
+    $XMODMAP $sysmodmap
+  fi
+fi
+
+exit 0

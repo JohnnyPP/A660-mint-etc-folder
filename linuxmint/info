@@ -1,0 +1,10 @@
+RELEASE=16
+CODENAME=petra
+EDITION="Cinnamon 64-bit"
+DESCRIPTION="Linux Mint 16 Petra"
+DESKTOP=Gnome
+TOOLKIT=GTK
+NEW_FEATURES_URL=http://www.linuxmint.com/rel_petra_cinnamon_whatsnew.php
+RELEASE_NOTES_URL=http://www.linuxmint.com/rel_petra_cinnamon.php
+USER_GUIDE_URL=http://www.linuxmint.com/documentation.php
+GRUB_TITLE=Linux Mint 16 Cinnamon 64-bit

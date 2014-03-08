@@ -1,0 +1,3 @@
+/usr/share/linuxmint/common/motd/10-help-text /etc/update-motd.d/10-help-text
+/usr/share/linuxmint/common/motd/legal /etc/legal
+

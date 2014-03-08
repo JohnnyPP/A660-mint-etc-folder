@@ -1,0 +1,12 @@
+# /etc/fstab: static file system information.
+#
+# Use 'blkid' to print the universally unique identifier for a
+# device; this may be used with UUID= as a more robust way to name devices
+# that works even if disks are added and removed. See fstab(5).
+#
+# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+# / was on /dev/sda7 during installation
+UUID=893025ec-a74c-4a43-bd63-d3ed958d8010 /               ext4    errors=remount-ro 0       1
+# swap was on /dev/sda6 during installation
+UUID=20fc4adf-4a0f-43b6-84ca-ddd6efd00e50 none            swap    sw              0       0
+UUID=101EBE23510B93F0  /media/ntfs2  ntfs-3g  defaults,windows_names,locale=en_US.utf8  0 0

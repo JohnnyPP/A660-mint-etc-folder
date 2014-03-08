@@ -1,0 +1,21 @@
+[connection]
+id=Auto KKSOSTR
+uuid=6cb7c8cb-57aa-4b2f-9d52-59a61f71a1c6
+type=802-11-wireless
+
+[802-11-wireless]
+ssid=KKSOSTR
+mode=infrastructure
+mac-address=E8:39:DF:05:CC:10
+security=802-11-wireless-security
+
+[802-11-wireless-security]
+key-mgmt=wpa-psk
+auth-alg=open
+psk=11111111112
+
+[ipv4]
+method=auto
+
+[ipv6]
+method=auto

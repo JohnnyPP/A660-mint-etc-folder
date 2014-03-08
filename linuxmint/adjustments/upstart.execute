@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if [ -f "/etc/init/plymouth-stop.conf" ]; then   
+    sed -i -e '/starting mdm/d'  \
+           -e 's@mdm|@@g'  \
+	   -e 's@or starting kdm@or starting kdm\n          or starting mdm@' \
+           -e 's@gdm|kdm@gdm|kdm|mdm@' \
+           /etc/init/plymouth-stop.conf
+fi
+
+if [ -f "/etc/init/hybrid-gfx.conf" ]; then
+    sed -i -e '/starting mdm/d'  \
+	   -e 's@or starting kdm@or starting kdm\n          or starting mdm@' \
+           /etc/init/hybrid-gfx.conf
+fi
+
